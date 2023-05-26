@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <main>
         <Search fetchBothAPIs={fetchBothAPIs} />
-        <Display weather={weather} />
+        { weather && <Display weather={weather} />}
         <section>
           <button></button>
           <button></button>
