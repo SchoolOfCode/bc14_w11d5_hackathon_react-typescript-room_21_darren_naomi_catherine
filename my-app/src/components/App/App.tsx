@@ -7,20 +7,21 @@ import Search from '../Search/Search.tsx'
 function App() {
   // state goes here
   type WeatherDataState  = {
-    data1[0].name: string
+    data1[0].name: string,
     data1[0].country: string,
     data2.current.temp: number, 
     data2.current.feels_like: number,
     data2.weather.main: string,
-    data2.weather.icon: string
-  const [weather, setWeather] = useState<WeatherDataState>(‘’)
+    data2.weather.icon: string,
+  }
+  const [weather, setWeather] = useState<WeatherDataState>({})
 
 
   //helper functions go here
-  async function fetchBothAPIs(search) {
+  async function fetchBothAPIs(search: string) {
     // first API call
-    const url1 = ‘http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=1&appid=03eeaa1ba18c8cd073330aef774df3e8’
-    cost response1 = await fetch(url1)
+    const url1 = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=1&appid=03eeaa1ba18c8cd073330aef774df3e8`
+    const response1 = await fetch(url1)
     const data1 = await response1.json()
     const name = data1.name
     const lat = data1.lat
