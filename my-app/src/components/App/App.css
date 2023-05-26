@@ -1,14 +1,47 @@
-main{
+main {
   margin: 50px;
   background-color: #d9d9d9;
   color: #222222;
   padding: 2%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#weather-widget{
+#weather-widget {
   background-color: #787171;
   color: #ffffff;
   padding: 3%;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
+input {
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px #222222;
+}
+
+button {
+  background: #90f0d6;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  font: normal 12px/1 "Ubuntu", sans-serif;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  margin: 2%;
+}
+
+#buttons > button {
+  margin: 3%;
+}
+
+#weather-image {
+  display: flex;
+  align-items: flex-end;
+}

@@ -37,11 +37,11 @@ function App() {
     const data2 = await response2.json();
     const temp = data2.main.temp;
     const feels_like = data2.main.feels_like;
-    const main = data2.weather.main;
-    const icon = data2.weather.icon;
+    const main = data2.weather[0].main;
+    const icon = data2.weather[0].icon;
     const name = data2.name;
     const country = data2.sys.country;
-    console.log(data2)
+    console.log(data2);
     const weatherData = {
       name,
       country,
@@ -57,10 +57,10 @@ function App() {
   return (
     <div className="App">
       <main>
-      <h1>Weather App</h1>
+        <h1>Weather App</h1>
         <Search fetchBothAPIs={fetchBothAPIs} />
-        { weather && <Display weather={weather} />}
-        <section>
+        {weather && <Display weather={weather} />}
+        <section id="buttons">
           <button>Hourly</button>
           <button>Daily</button>
         </section>
