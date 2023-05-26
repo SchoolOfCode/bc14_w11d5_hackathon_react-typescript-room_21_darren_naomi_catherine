@@ -61,8 +61,8 @@ function App() {
         <Search fetchBothAPIs={fetchBothAPIs} />
         { weather && <Display weather={weather} />}
         <section>
-          <button></button>
-          <button></button>
+          <button>Hourly</button>
+          <button>Daily</button>
         </section>
       </main>
     </div>

@@ -14,7 +14,7 @@ export default function Display(props: WeatherDataState) {
   const { weather } = props;
 
   return (
-    <div>
+    <div id="weather-widget">
     
       <h2>
         {weather.name}, {weather.country}
